@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="{{asset('webApps/plugins/summernote/summernote-bs4.min.css')}}">
 
   <link rel="stylesheet" href="{{asset('webApps/css/style.css')}}">
+
+  <link rel="stylesheet" href="{{asset('webApps/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{asset('webApps/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{asset('webApps/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -211,7 +215,7 @@
               <p>
                 Sub Admin
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -236,7 +240,7 @@
               <p>
                 DC Admin
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -261,7 +265,7 @@
               <p>
                 BC Admin
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -285,7 +289,7 @@
               <p>
                 SS Admin
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -310,7 +314,7 @@
               <p>
                 User
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -341,7 +345,7 @@
               <p>
                 Shop Keeper
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -365,7 +369,7 @@
               <p>
                 CMS Management
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -456,6 +460,7 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('webApps/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
@@ -465,6 +470,7 @@
 <script src="{{asset('webApps/plugins/chart.js/Chart.min.js')}}"></script>
 <!-- Sparkline -->
 <script src="{{asset('webApps/plugins/sparklines/sparkline.js')}}"></script>
+
 <!-- JQVMap -->
 <script src="{{asset('webApps/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
 <script src="{{asset('webApps/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
@@ -485,5 +491,36 @@
 <script src="{{asset('webApps/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('webApps/dist/js/pages/dashboard.js')}}"></script>
+
+<script src="{{asset('webApps/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/jszip/jszip.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/pdfmake/pdfmake.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/pdfmake/vfs_fonts.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{asset('webApps/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
 </body>
 </html>

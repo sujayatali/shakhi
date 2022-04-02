@@ -31,9 +31,9 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="example2" class="table table-bordered table-striped">
                   <thead>
-                  <tr align="center">
+                  <tr>
                     <th>Sr No.</th>
                     <th> Name</th>
                     <th> Father's</th>
@@ -44,8 +44,8 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach($users as $user)  
-                        <tr align="center">
+                      @foreach($users as $user)
+                        <tr>
                           <td>{{$user->user_id}}</td>
                           <td>{{$user->name}}</td>
                           <td>{{get_user_meta($user->user_id,'father_name')}}</td>
@@ -65,7 +65,7 @@
                       @endforeach
                     </tbody>
                   <tfoot>
-                 <tr align="center">
+                 <tr>
                     <th>Sr No.</th>
                     <th> Name</th>
                     <th> Father's</th>

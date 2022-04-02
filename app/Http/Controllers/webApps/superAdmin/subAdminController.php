@@ -5,6 +5,7 @@ namespace App\Http\Controllers\webApps\superAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\user_meta;
 use DB;
 
 class subAdminController extends Controller
@@ -18,7 +19,7 @@ class subAdminController extends Controller
     {
         $users = DB::table('users')
                 ->join('user_metas', 'users.id', '=', 'user_metas.user_id')
-                ->get()->where('meta_key','role')->where('meta_value','sub_admin');
+                ->get()->where('role','sub_admin');
         return view('webApps.superAdmin.subAdmin.super-admin-subadmin-registration-view')->with(compact('users'));
     }
 
@@ -60,20 +61,25 @@ class subAdminController extends Controller
         $user->email_verified_at = date('Y-m-d H:m:s');
         $user->remember_token = $request->_token;
         $user->password = $request->password;
+        $user->role = 'sub_admin';
         $user->save();
         $last_user_id = $user->id;
 
-        $url = upload_attachment($request->file('files'), '/webApps/images/profile');
-        update_user_meta($last_user_id, 'profile_url', $url);
-        update_user_meta($last_user_id, 'role', 'sub_admin');
-        update_user_meta($last_user_id, 'father_name', $request->father_name);
-        update_user_meta($last_user_id, 'dob', $request->dob);
-        update_user_meta($last_user_id, 'contact', $request->contact);
-        update_user_meta($last_user_id, 'qualification', $request->qualification);
-        update_user_meta($last_user_id, 'address', $request->address);
-        update_user_meta($last_user_id, 'district', $request->district);
-        update_user_meta($last_user_id, 'state', $request->state);
-        update_user_meta($last_user_id, 'amount', $request->amount);
+
+
+        $user_meta = new user_meta();
+        $user_meta->profile_url     = $request->profile_url;
+        $user_meta->father_name     = $request->father_name;
+        $user_meta->dob             = $request->dob;
+        $user_meta->address         = $request->address;
+        $user_meta->district        = $request->district;
+        $user_meta->mobile_no       = $request->mobile_no;
+        $user_meta->qualification   = $request->qualification;
+        $user_meta->state           = $request->state;
+        $user_meta->pin_code        = $request->pin_code;
+        $user_meta->amount          = $request->amount;
+        $user_meta->user_id          = $last_user_id;
+        $user_meta->save();
 
         if($last_user_id){
             $request->session()->flash('message-register', 'Successfull registration');

@@ -15,236 +15,13 @@
 </head>
 
 <body class="scroll_down">
-	
+
 <style type="text/css">
 		.scroll_down{
 			overflow-y: scroll !important;
 		}
 	</style>
-	<!-- <div class="preloader">
-		<div class="preloader_image"></div>
-	</div> -->
 
-	<!-- search modal --
-	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-		<div class="widget widget_search">
-			<form method="get" class="searchform search-form" action="https://html.modernwebtemplates.com/">
-				<div class="form-group">
-					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
-				</div>
-				<button type="submit" class="btn">Search</button>
-			</form>
-		</div>
-	</div>
-	<div id="team-form" class="ds modal">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 offset-md-3">
-					<div class="row">
-						<div class="col-12 text-center">
-							<div class="header title">
-								<h4>Contact Me</h4>
-								<p>Have You any Questions? Ask Me!</p>
-							</div>
-
-						</div>
-						<a href="javascript:void(0)" data-dismiss="modal" aria-label="Close" class="remove">×</a>
-					</div>
-					<form class="contact-form c-mb-25 c-gutter-20" method="post" action="https://html.modernwebtemplates.com/">
-
-
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="name3">Full Name <span class="required">*</span></label>
-
-									<input type="text" aria-required="true" size="30" value="" name="name" id="name3" class="form-control" placeholder="Name">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="email3">Email address<span class="required">*</span></label>
-
-									<input type="email" aria-required="true" size="30" value="" name="email3" id="email3" class="form-control" placeholder="Email">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="message3">Message</label>
-									<textarea aria-required="true" rows="6" cols="45" name="message" id="message3" class="form-control" placeholder="Message"></textarea>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12 text-center">
-								<div class="form-group">
-									<input class="btn btn-maincolor" type="submit" value="Send Message">
-								</div>
-							</div>
-						</div>
-					</form>
-
-				</div>
-			</div>
-
-
-		</div>
-
-
-	</div>
-	<div id="login-form" class="ls modal c-gutter-0">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 ds column-overlay">
-					<img src="images/signup.jpg" alt="">
-				</div>
-				<div class="col-md-6 ls">
-					<div class="divider-65 hidden-below-md"></div>
-					<div class="divider-60 hidden-above-md"></div>
-					<h4 class="special-heading text-center text-capitalize">Sign Up</h4>
-
-					<form class="contact-form c-mb-30 c-gutter-20" method="post" action="https://html.modernwebtemplates.com/">
-
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="name">Full Name <span class="required">*</span></label>
-
-									<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Name">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="email">Email address<span class="required">*</span></label>
-
-									<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="password">Password<span class="required">*</span></label>
-
-									<input type="password" aria-required="true" size="30" value="" name="password" id="password" class="form-control" placeholder="Password">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="form-group">
-
-									<input type="checkbox" id="agree" name="agree" checked>
-									<label for="agree">I agree with all the text in the agreement</label>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<a href="#" class="btn btn-with-border sign-in">I am already Member</a>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12 text-center">
-								<div class="form-group">
-									<input class="btn btn-maincolor" type="submit" value="Learn more">
-								</div>
-							</div>
-						</div>
-					</form>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="login-form2" class="ls modal c-gutter-0">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 ds column-overlay">
-					<img src="images/signup.jpg" alt="">
-				</div>
-				<div class="col-md-6 align-items-center d-flex flex-column justify-content-center ls">
-					<div class="divider-65 hidden-below-md"></div>
-					<div class="divider-60 hidden-above-md"></div>
-					<h4 class="special-heading text-center text-capitalize">Sign in</h4>
-
-					<form class="contact-form c-mb-30 c-gutter-20" method="post" action="https://html.modernwebtemplates.com/">
-
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="name2">Full Name <span class="required">*</span></label>
-
-									<input type="text" aria-required="true" size="30" value="" name="name" id="name2" class="form-control" placeholder="Name">
-								</div>
-							</div>
-
-							<div class="col-sm-12">
-								<div class="form-group has-placeholder">
-									<label for="password2">Password<span class="required">*</span></label>
-
-									<input type="password" aria-required="true" size="30" value="" name="password2" id="password2" class="form-control" placeholder="Password">
-								</div>
-							</div>
-
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<a href="#" class="btn btn-with-border">Forgot Password?</a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12 text-center">
-								<div class="form-group">
-									<input class="btn btn-maincolor" type="submit" value="Learn more">
-								</div>
-							</div>
-						</div>
-					</form>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div id="years" class="ls s-py-md-70 s-py-60 years modal text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<h4 class="special-heading text-center">Are you over 21 years old?</h4>
-					<div class="divider-70 hidden-below-md"></div>
-					<div class="divider-30 hidden-above-md"></div>
-					<div class="years-btn">
-						<a href="#" class="btn btn-maincolor2 btn-yes">Yes</a>
-						<a href="index-2.html" class="btn btn-maincolor btn-no">no</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div> --->
-
-
-	<!-- Unyson messages modal --
-	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
-		<div class="fw-messages-wrap ls p-normal">
-			Uncomment this UL with LI to show messages in modal popup to your user: -->
-			<!--
-		<ul class="list-unstyled">
-			<li>Message To User</li>
-		</ul>
-		-->
-
-		<!-- </div>
-	</div> --><!-- eof .modal -->
 
 	<!-- wrappers for visual page editor and boxed version of template -->
 	<div id="canvas">
@@ -269,85 +46,10 @@
 
 						<div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-md-end justify-content-center align-items-center">
 							<div class="login-modal">
-								<a class="login-form-btn" id="login-header-menu" style="border: 1px solid white; padding: 3px 8px; border-radius: 6px;" href="http://shakhi.org/login-panel"><i class="fa fa-user text-white"> Login</i></a>
+								<a class="login-form-btn" id="login-header-menu" style="border: 1px solid white; padding: 3px 8px; border-radius: 6px;" href="http://127.0.0.1:8000/login-panel"><i class="fa fa-user text-white"> Login</i></a>
 							</div>
-							
-							<!--user action-->
-							<!-- <div class="dropdown widget_search">
-								<a class="dropdown-toggle dropdown-toggle-split" href="#" id="headerSearchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i class="fa fa-search"></i>
-								</a>
-
-								<div class="dropdown-menu ls ms " aria-labelledby="headerSearchDropdown">
-									<form role="search" method="get" class="search-form" action="https://html.modernwebtemplates.com/">
-										<label for="search-form-top">
-											<span class="screen-reader-text">Search for:</span>
-										</label>
-										<input type="search" id="search-form-top" class="search-field" placeholder="Search keyword" value="" name="search">
-										<button type="submit" class="search-submit">
-											<span class="screen-reader-text">Search</span>
-										</button>
-									</form>
-								</div>
-							</div> -->
-
-							<!-- <div class="dropdown shopping-cart">
-								<a class="dropdown-toggle dropdown-shopping-cart" href="#" role="button" id="dropdown-shopping-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i class="fas fa-shopping-bag"></i>
-									<span class="badge bg-maincolor2">3</span>
-								</a>
-								<div class="dropdown-menu ls" aria-labelledby="dropdown-shopping-cart">
-									<div class="widget woocommerce widget_shopping_cart">
 
 
-										<div class="widget_shopping_cart_content">
-
-											<ul class="woocommerce-mini-cart cart_list product_list_widget ">
-												<li class="woocommerce-mini-cart-item mini_cart_item">
-													<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku="">×</a>
-													<a href="shop-product-right.html">
-														<img src="images/shop/26.jpg" alt="">Medical marijuana THC
-													</a>
-
-													<span class="quantity">1 ×
-														<span class="woocommerce-Price-amount amount">
-															<span class="woocommerce-Price-currencySymbol">$</span>
-															12.00
-														</span>
-													</span>
-												</li>
-												<li class="woocommerce-mini-cart-item mini_cart_item">
-													<a href="#" class="remove" aria-label="Remove this item" data-product_id="76" data-product_sku="">×</a>
-													<a href="shop-product-right.html">
-														<img src="images/shop/26.jpg" alt="">Medical marijuana THC
-													</a>
-
-													<span class="quantity">1 ×
-														<span class="woocommerce-Price-amount amount">
-															<span class="woocommerce-Price-currencySymbol">$</span>
-															15.00
-														</span>
-													</span>
-												</li>
-											</ul>
-
-											<p class="woocommerce-mini-cart__total total">
-												<strong>Subtotal:</strong>
-												<span class="woocommerce-Price-amount amount">
-													<span class="woocommerce-Price-currencySymbol">$</span>
-													27.00
-												</span>
-											</p>
-
-											<p class="woocommerce-mini-cart__buttons buttons">
-												<a href="shop-cart.html" class="button wc-forward">View cart</a>
-												<a href="shop-checkout.html" class="button checkout wc-forward">Checkout</a>
-											</p>
-										</div>
-									</div>
-
-								</div>
-							</div> -->
 
 						</div>
 					</div>
@@ -386,7 +88,7 @@
 									<li>
 										<a href="/certificate">Certificate</a>
 									</li>
-									
+
 									<li>
 										<a href="/news">News</a>
 									</li>
@@ -451,7 +153,7 @@
 							</div>
 						</div>
 
-						
+
 						<div class="col-lg-4 col-md-6 mb-0 animate" data-animation="fadeInUp">
 
 							<div class="widget widget_icons_list">

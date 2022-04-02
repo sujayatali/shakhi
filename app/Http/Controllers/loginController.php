@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserLoginVerifyRequest;
 use App\Models\User;
+use App\Models\user_meta;
 use Illuminate\Support\Facades\DB;
 
 class loginController extends Controller
@@ -15,17 +16,19 @@ class loginController extends Controller
 
     public function loginUser(Request $request){
         $user = DB::table('users')
-                ->join('user_metas', 'users.id', '=', 'user_metas.user_id')
                 ->where('email', $request->username)
                 ->where('password', $request->password)
                 ->get();
+                // echo"<pre>";
+                // print_r($user); die;
 
-        if(empty($user[0])){    
+
+        if(empty($user[0])){
             $request->session()->flash('message', 'Invalid Username or password');
             return view('webApps.loginPage.login');
         }else{
             $request->session()->put('user', $user);
-            switch(get_user_meta($user[0]->user_id, 'role')):
+            switch($user[0]->role):
                 case 'super_admin':
                     return redirect('/super-admin-dashboard');
                 break;
@@ -63,7 +66,7 @@ class loginController extends Controller
     }
 
     public function userLogout(){
-        session()->flush();   
+        session()->flush();
     	return redirect('/login-panel');
     }
 }

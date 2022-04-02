@@ -1,8 +1,9 @@
 <?php
+use App\Models\User;
 use App\Models\user_meta;
 use App\Models\post;
 use App\Models\post_meta;
-use DB;
+//use DB;
 //-----| users & user_metas |-----
 function get_user_meta($user_id, $meta_key){
     $results = user_meta::get()->where('user_id',$user_id)->where('meta_key',$meta_key);
@@ -27,10 +28,10 @@ function update_user_meta($user_id, $meta_key, $meta_value){
         $user->meta_key = $meta_key;
         $user->meta_value = $meta_value;
         $user->save();
-    }    
+    }
 }
 
-//-----| posts & post_metas |----- 
+//-----| posts & post_metas |-----
 function get_post_meta($post_id, $meta_key){
     $results = post_meta::get()->where('post_id',$post_id)->where('meta_key',$meta_key);
     foreach($results as $result){
@@ -54,7 +55,7 @@ function update_post_meta($post_id, $meta_key, $meta_value){
         $post->meta_key = $meta_key;
         $post->meta_value = $meta_value;
         $post->save();
-    }    
+    }
 }
 
 function delete_post_meta($post_id, $meta_key){
@@ -64,7 +65,7 @@ function delete_post_meta($post_id, $meta_key){
         $result_ = $result['id'];
     }
     $post = post_meta::find($result_);
-    $post->delete();  
+    $post->delete();
 }
 
 
